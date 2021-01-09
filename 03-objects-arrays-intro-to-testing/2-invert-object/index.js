@@ -5,4 +5,18 @@
  */
 export function invertObj(obj) {
 
+  let newObj = {};
+
+  if (obj === undefined) {
+    return undefined;
+  }
+
+  if (obj !== null) {
+    for (let key in obj) {
+      newObj[obj[key]] = key;
+    }
+    return newObj;
+  }
+
 }
+
